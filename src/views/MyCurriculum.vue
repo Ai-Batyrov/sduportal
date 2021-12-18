@@ -1,10 +1,12 @@
 <template>
-<div></div>
+<div>
+  <h1>Hello from MyCurriculum</h1>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'Schedule'
+  name: 'MyCurriculum'
 }
 </script>
 

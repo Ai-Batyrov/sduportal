@@ -10,8 +10,8 @@
             <label>Account pages</label>
             <div>
                   <ul>
-                     <li class="active">
-                        <router-link tag="a" to="/">
+                     <li>
+                        <router-link tag="a" to="/Main">
                            <div class="menu-icons">
                               <img src="@/assets/sidebar/home.svg" alt="nav">
                            </div>
@@ -19,7 +19,7 @@
                         </router-link>
                      </li>
                      <li>
-                        <router-link tag="a" to="/">
+                        <router-link tag="a" to="/MyCurriculum">
                            <div class="menu-icons">
                               <img src="@/assets/sidebar/curriculum.svg" alt="nav">
                            </div>
@@ -188,7 +188,7 @@ label {
    font-size: 14px;
    font-weight: bold;
    color: #67748E;
-   margin-left: 15px;
+   margin: 0 15px 10px 10px;
    text-transform: uppercase;
 }
 
@@ -233,12 +233,12 @@ ul {
    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.07);
 }
 
-.active {
+a.router-link-exact-active {
    background-color: white;
-   box-shadow: 0 20px 27px rgba(0, 0, 0, 0.08);
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
    border-radius: 8px;
    font-weight: bold;
-    a > .menu-icons {
+   .menu-icons {
       background-color: #7928CA;
     }
 }
@@ -280,8 +280,14 @@ ul {
           height: 50px;
           cursor: pointer;
           .font();
+          font-size: 16px!important;
           color: #252F40;
           font-weight: bold;
+          &:hover {
+            background-color: #d7d7d7;
+            box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);
+            transition: ease .4s;
+          }
         }
       }
     }

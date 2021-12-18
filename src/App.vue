@@ -1,6 +1,14 @@
 <template>
     <SideBar id="sidebar" />
-    <Main id="main"/>
+    <router-view id="main" v-slot="{ Component }">
+      <transition
+        enter-active-class="animate__animated animate__fadeInDown"
+        leave-active-class="animate__animated animate__fadeOutDown"
+        mode="out-in"
+      >
+        <component :is="Component" />
+      </transition>
+    </router-view>
 </template>
 
 <style>
@@ -21,18 +29,30 @@ body {
    margin-right: 40px;
 }
 
-#main {
+#main  {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 1000px;
+  height: auto;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease-out;
 }
 
 </style>
 <script>
 import SideBar from '@/components/SideBar'
-import Main from '@/components/Home/Main'
+import Main from '@/views/Main'
+import MyCurriculum from '@/views/MyCurriculum'
 export default {
-  components: { SideBar, Main }
+  // eslint-disable-next-line vue/no-unused-components
+  components: { SideBar, Main, MyCurriculum }
 }
 </script>

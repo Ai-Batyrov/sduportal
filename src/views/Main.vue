@@ -1,72 +1,21 @@
 <template>
   <div>
-    <div id="ultimate">
-      <section>
-        <div id="nav">
-          <div>
-            <div class="navbar-element">
-              <img src="@/assets/home/nav/user-circle.svg" alt="user">
-            </div>
-            <div class="navbar-element">
-              <img src="@/assets/home/nav/settingssvg.svg" alt="settings">
-            </div>
-            <div class="navbar-element">
-              <img src="@/assets/home/nav/mail.svg" alt="mail">
-            </div>
-          </div>
-        </div>
-      </section>
-      <div id="home-menu">
-        <div id="user-avatar">
-          <figure>
-            <img src="@/assets/home/nav/avatar.jpg" alt="avatar" width="74px">
-          </figure>
-          <span>
-          <div id="fullname">Aibolat Batyrov</div>
-          <div id="student">Student</div>
-        </span>
-        </div>
-        <div id="home-schedule-attendance">
-          <uL>
-            <li class="active">
-              <a href="">
-                <div>
-                  <img src="@/assets/home/nav/home.svg" alt="nav">
-                </div>
-                <div>Home</div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div>
-                  <img src="@/assets/home/nav/schedule.svg" alt="nav">
-                </div>
-                <div>Schedule</div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div>
-                  <img src="@/assets/home/nav/attendance.svg" alt="nav">
-                </div>
-                <div>Attendance</div>
-              </a>
-            </li>
-          </uL>
-        </div>
-      </div>
-    </div>
+    <HomePage />
     <div id="inner-component">
-      <Home />
+      <router-view />
     </div>
   </div>
 </template>
 
 <script>
-import Home from '@/components/Home/Home'
+import HomePage from '@/components/Home/HomePage'
+import Home from '@/views/Home/Home'
+import Schedule from '@/views/Home/Schedule'
+import Attendance from '@/views/Home/Attendance'
 export default {
   name: 'Main',
-  components: { Home }
+  // eslint-disable-next-line vue/no-unused-components
+  components: { HomePage, Home, Schedule, Attendance }
 }
 </script>
 
@@ -77,12 +26,12 @@ export default {
 }
 
 #inner-component {
-  margin-top: 200px;
+  height: 100%;
 }
 
 #ultimate {
   width: 100%;
-  height: 30vh;
+  height: 50%;
 }
 
 section {
@@ -117,11 +66,11 @@ section {
 
 #home-menu {
   position: absolute;
-  width: 70%;
+  width: 73%;
   display: flex;
   justify-content: space-between;
-  left: 370px;
-  top: 290px;
+  left: 350px;
+  top: 280px;
   background: rgba(255, 255, 255, 0.80059);
   box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(27.1828px);

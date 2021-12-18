@@ -1,7 +1,7 @@
 <template>
   <div id="cards">
     <div class="card">
-      <div class="h1">Student Information</div>
+      <div class="hh1">Student Information</div>
       <div class="information">
         <span>
           <label>Full name:</label>
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="h1">Taken Courses</div>
+      <div class="hh1">Taken Courses</div>
       <div class="information">
         <span>
           <label>CSS 152</label>
@@ -53,7 +53,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="h1">Classmates Birthday</div>
+      <div class="hh1">Classmates Birthday</div>
       <div class="information">
         <span>
           <label>Aisanym Nurbaulina</label>
@@ -103,7 +103,7 @@ export default {
     color: #252F40;
     margin: 20px;
   }
-  .h1 {
+  .hh1 {
     font-weight: bold;
   }
 }
