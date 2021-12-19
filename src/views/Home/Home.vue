@@ -1,8 +1,11 @@
 <template>
-  <div id="cards">
-    <div class="card">
-      <div class="hh1">Student Information</div>
-      <div class="information">
+  <div>
+    <h1>Home</h1>
+    <br>
+    <div id="cards">
+      <div class="card">
+        <div class="h-card">Student Information</div>
+        <div class="information">
         <span>
           <label>Full name:</label>
           <label>Student ID:</label>
@@ -14,7 +17,7 @@
           <label>UNT score:</label>
           <label>Grant type:</label>
         </span>
-        <span>
+          <span>
           <label>Aibolat Batyrov</label>
           <label>200103356</label>
           <label>12 January 2003</label>
@@ -25,11 +28,11 @@
           <label>99</label>
           <label>State Grant</label>
         </span>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="hh1">Taken Courses</div>
-      <div class="information">
+      <div class="card">
+        <div class="h-card">Taken Courses</div>
+        <div class="information">
         <span>
           <label>CSS 152</label>
           <label>CSS 215</label>
@@ -40,7 +43,7 @@
           <label>MDE 143</label>
           <label>MDE 191</label>
         </span>
-        <span>
+          <span>
           <label>Physics</label>
           <label>Introduction to Algorithms</label>
           <label>Web programming: front end</label>
@@ -50,11 +53,11 @@
           <label>Physical Education 3</label>
           <label>Foreign Language 2</label>
         </span>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="hh1">Classmates Birthday</div>
-      <div class="information">
+      <div class="card">
+        <div class="h-card">Groupmates Birthday</div>
+        <div class="information">
         <span>
           <label>Aisanym Nurbaulina</label>
           <label>Alibi Zhumagaliyev</label>
@@ -69,6 +72,7 @@
           <label></label>
         </span>
         </div>
+      </div>
     </div>
   </div>
 </template>
@@ -85,7 +89,13 @@ export default {
   color: #67748E;
 }
 
+h1 {
+  .font();
+  color: #3d4356;
+}
+
 #cards {
+  width: 100%;
   display: flex;
   height: 500px;
   justify-content: space-between;
@@ -103,7 +113,7 @@ export default {
     color: #252F40;
     margin: 20px;
   }
-  .hh1 {
+  .h-card {
     font-weight: bold;
   }
 }

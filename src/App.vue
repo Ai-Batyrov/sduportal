@@ -1,11 +1,7 @@
 <template>
     <SideBar id="sidebar" />
     <router-view id="main" v-slot="{ Component }">
-      <transition
-        enter-active-class="animate__animated animate__fadeInDown"
-        leave-active-class="animate__animated animate__fadeOutDown"
-        mode="out-in"
-      >
+      <transition name="bounce" mode="out-in">
         <component :is="Component" />
       </transition>
     </router-view>
@@ -19,11 +15,12 @@
 
 body {
   padding: 30px;
-  background-color: #F8F9FA;
-  height: 90%;
+  background: #F8F9FA!important;
+  height: 100%;
 }
 
 #sidebar {
+   position: marker;
    display: flex;
    flex-direction: column;
    margin-right: 40px;
@@ -32,18 +29,33 @@ body {
 #main  {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
 }
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+.bounce-leave-active {
+  animation: bounce-in 0.4s reverse;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease-out;
+.bounce-enter-active {
+  animation: bounce-in 0.4s;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: translateY(100rem);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-5rem);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
 }
 
 </style>

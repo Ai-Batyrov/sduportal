@@ -1,6 +1,8 @@
 <template>
 <div>
   <section>
+    <h2 style="font-family: 'Mark Pro', serif">My schedule</h2>
+    <br>
     <table class="table table-hover table-bordered">
       <thead>
       <tr>
@@ -110,6 +112,6 @@ export default {
 <style scoped>
 table {
   text-align: center;
-  font-family: 'Mark Pro';
+  font-family: 'Mark Pro', serif;
 }
 </style>
