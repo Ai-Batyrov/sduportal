@@ -4,30 +4,30 @@
       <caption align="top">Semester #{{ semester.id }}</caption>
       <thead>
       <tr>
-        <th>№</th>
         <th>Code</th>
         <th>Course name</th>
-        <th>theory</th>
-        <th>practice</th>
-        <th>credits</th>
+        <th>Credits</th>
         <th>ECTS</th>
-        <th>grade</th>
-        <th>requisites</th>
-        <th>status</th>
+        <th>Absence</th>
+        <th>Total</th>
+        <th>Letter Grade</th>
+        <th>RE1</th>
+        <th>RE2</th>
       </tr>
       </thead>
       <tbody>
-      <TableItem v-for="(course, i) in semester.courses" :key="course.id" :course="course" :id="(i + 1)"/>
+      <TableItemlayout v-for="(course, i) in semester.courses" :key="course.id" :course="course" :id="(i + 1)"/>
       </tbody>
     </table>
   </div>
 </template>
 
 <script>
-import TableItem from '@/components/MyCurriculumTable/TableItem'
+import TableItemlayout from '@/layouts/TableItemlayout'
+
 export default {
-  name: 'MyCurriculumTable',
-  components: { TableItem },
+  name: 'Tablelayout',
+  components: { TableItemlayout },
   props: ['semester', 'courses', 'id'],
   data () {
     return {}

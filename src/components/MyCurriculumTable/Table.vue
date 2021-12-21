@@ -1,21 +1,20 @@
 <template>
-  <div>
-    <div id="top">
-      <h1>My Curriculum / Course Structure</h1>
-      <profile />
-    </div>
-    <div id="tables">
-      <Table />
-    </div>
-  </div>
+<div>
+  <MyCurriculumTable
+    v-for="(semester, i) in semesters"
+    :key="semester.id"
+    :semester="semester"
+    :id="(i + 1)"
+    class="table-wrap"
+    />
+</div>
 </template>
 
 <script>
-import Profile from '@/components/profile/profile'
-import Table from '@/components/MyCurriculumTable/Table'
+import MyCurriculumTable from '@/components/MyCurriculumTable/MyCurriculumTable'
 export default {
-  name: 'MyCurriculum',
-  components: { Table, Profile },
+  name: 'Table',
+  components: { MyCurriculumTable },
   data () {
     return {
       semesters: [
@@ -228,7 +227,7 @@ export default {
               ects: 2,
               grade: 'IP',
               requisites: '',
-              status: ''
+              status: 'available'
             },
             {
               code: 'MDE 143',
@@ -261,7 +260,7 @@ export default {
               ects: 3,
               grade: 'IP',
               requisites: '',
-              status: ''
+              status: 'available'
             },
             {
               code: 'MDE 113',
@@ -272,7 +271,7 @@ export default {
               ects: 3,
               grade: 'IP',
               requisites: '',
-              status: ''
+              status: 'available'
             }
           ]
         },
@@ -321,7 +320,7 @@ export default {
               ects: 2,
               grade: '',
               requisites: '',
-              status: ''
+              status: 'add'
             },
             {
               code: 'INF 313',
@@ -332,7 +331,7 @@ export default {
               ects: 5,
               grade: '',
               requisites: '',
-              status: ''
+              status: 'add'
             },
             {
               code: 'MDE 134',
@@ -365,34 +364,15 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#MyCurriculum {
+.table-wrap {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-
-#top {
-  position: sticky;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  height: 10%;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 10px 10px 20px 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
-
-  h1 {
-    font-family: "Mark Pro", serif;
-  }
 }
-
-#tables {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: 90%;
-}
-
 </style>

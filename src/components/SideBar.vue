@@ -55,14 +55,14 @@
                         </router-link>
                      </li>
                      <li>
-                        <a href="">
+                        <router-link tag="a" to="/Transcript">
                            <div class="menu-icons">
                              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                <path d="M14.1316 12.4658L11.3158 9.42114L10.8655 9.87181L10.3555 9.36182C10.3946 9.3112 10.4337 9.26057 10.4708 9.20892C11.2693 8.09333 11.6205 6.71886 11.455 5.35693C11.2895 3.99501 10.6193 2.74467 9.57679 1.85283C8.53427 0.960992 7.19522 0.492507 5.8241 0.539895C4.45297 0.587283 3.14946 1.1471 2.171 2.10878C1.19254 3.07047 0.610263 4.3641 0.53917 5.7342C0.468076 7.1043 0.913335 8.45125 1.78701 9.50905C2.66068 10.5668 3.89925 11.2586 5.25811 11.4476C6.61696 11.6366 7.99731 11.3093 9.12654 10.5301C9.20425 10.4765 9.28062 10.4207 9.35564 10.3626L9.86483 10.8717L9.35925 11.3773L12.4659 14.1341C12.5754 14.2436 12.7054 14.3306 12.8485 14.3898C12.9916 14.4491 13.145 14.4796 13.2999 14.4796C13.4548 14.4795 13.6081 14.449 13.7512 14.3896C13.8943 14.3303 14.0243 14.2433 14.1337 14.1337C14.2432 14.0241 14.3299 13.894 14.3891 13.7508C14.4482 13.6076 14.4785 13.4542 14.4783 13.2993C14.4781 13.1444 14.4474 12.9911 14.3879 12.8481C14.3284 12.7051 14.2413 12.5752 14.1316 12.4658L14.1316 12.4658ZM8.69766 8.69877C8.07553 9.32221 7.25645 9.71061 6.38002 9.79775C5.50359 9.88489 4.62407 9.66539 3.89136 9.17665C3.15865 8.68792 2.61812 7.9602 2.36189 7.11755C2.10566 6.27489 2.1496 5.36945 2.48622 4.55557C2.82284 3.74168 3.4313 3.06972 4.20788 2.65423C4.98447 2.23874 5.88112 2.10543 6.74499 2.27703C7.60886 2.44863 8.38649 2.91451 8.94532 3.59526C9.50415 4.27602 9.8096 5.12951 9.8096 6.01026C9.80956 7.01831 9.40967 7.98518 8.69766 8.69877Z" fill="#2D3E50"/>
                              </svg>
                            </div>
                            <div>Transcript</div>
-                        </a>
+                        </router-link>
                      </li>
                   </ul>
             </div>
@@ -73,30 +73,39 @@
             <div>
                <ul>
                   <li>
-                     <a href="">
+                     <router-link tag="a" to="/CourseRegistration">
                         <div class="menu-icons">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M17,2 C17.5522847,2 18,2.44771525 18,3 L18,4 L19,4 C20.6568542,4 22,5.34314575 22,7 L22,19 C22,20.6568542 20.6568542,22 19,22 L5,22 C3.34314575,22 2,20.6568542 2,19 L2,7 C2,5.34314575 3.34314575,4 5,4 L6,4 L6,3 C6,2.44771525 6.44771525,2 7,2 C7.55228475,2 8,2.44771525 8,3 L8,4 L16,4 L16,3 C16,2.44771525 16.4477153,2 17,2 Z M20,12 L4,12 L4,19 C4,19.5522847 4.44771525,20 5,20 L19,20 C19.5522847,20 20,19.5522847 20,19 L20,12 Z M17,14 C17.5522847,14 18,14.4477153 18,15 L18,17 C18,17.5522847 17.5522847,18 17,18 L15,18 C14.4477153,18 14,17.5522847 14,17 L14,15 C14,14.4477153 14.4477153,14 15,14 L17,14 Z M6,6 L5,6 C4.44771525,6 4,6.44771525 4,7 L4,10 L20,10 L20,7 C20,6.44771525 19.5522847,6 19,6 L18,6 L18,7 C18,7.55228475 17.5522847,8 17,8 C16.4477153,8 16,7.55228475 16,7 L16,6 L8,6 L8,7 C8,7.55228475 7.55228475,8 7,8 C6.44771525,8 6,7.55228475 6,7 L6,6 Z"/>
                           </svg>
                         </div>
                         <div>Course Registration</div>
-                     </a>
+                     </router-link>
                   </li>
                   <li>
-                     <a href="">
+                     <router-link tag="a" to="/Wishlist">
                         <div class="menu-icons">
-                           <img src="@/assets/sidebar/wishlist.svg" alt="nav">
+                          <svg xmlns="http://www.w3.org/2000/svg"
+                               viewBox="-3 -3 38 38" style=".st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}" xml:space="preserve">
+                            <line class="st0" x1="5" y1="6" x2="5" y2="25"/>
+                            <line class="st0" x1="27" y1="6" x2="27" y2="25"/>
+                            <line class="st0" x1="5" y1="6" x2="27" y2="6"/>
+                            <line class="st0" x1="5" y1="26" x2="27" y2="26"/>
+                            <line class="st0" x1="10" y1="16" x2="22" y2="16"/>
+                            <line class="st0" x1="10" y1="12" x2="22" y2="12"/>
+                            <line class="st0" x1="10" y1="20" x2="22" y2="20"/>
+                          </svg>
                         </div>
                         <div>Wish list</div>
-                     </a>
+                     </router-link>
                   </li>
                   <li>
-                     <a href="">
+                     <router-link tag="a" to="/Withdrawals">
                         <div class="menu-icons">
                           <svg viewBox="0 0 512 512" width="21px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M74.966,437.013c-99.97-99.97-99.97-262.065,0-362.037c100.002-99.97,262.066-99.97,362.067,0  c99.971,99.971,99.971,262.067,0,362.037C337.032,536.998,174.968,536.998,74.966,437.013z M391.782,120.227  c-75.001-74.985-196.564-74.985-271.534,0c-75.001,74.985-75.001,196.55,0,271.535c74.97,74.986,196.533,74.986,271.534,0  C466.754,316.775,466.754,195.212,391.782,120.227z M188.124,369.137l-45.251-45.266l67.876-67.877l-67.876-67.876l45.251-45.267  L256,210.743l67.877-67.892l45.25,45.267l-67.876,67.876l67.876,67.877l-45.25,45.266L256,301.245L188.124,369.137z"/></svg>
                         </div>
                         <div>Withdrawals</div>
-                     </a>
+                     </router-link>
                   </li>
                   <li>
                      <a href="">
@@ -160,11 +169,8 @@
          <section id="section-4">
             <section>
                <div>
-                  <span class="menu-icons">
-                    <img src="@/assets/sidebar/diamond.svg" alt="diamond">
-                  </span>
                   <div>
-                     Need help? <br>
+                     About author<br>
                      Check documentation
                   </div>
                   <button type="button">
@@ -280,8 +286,11 @@ a.router-link-exact-active {
    .menu-icons {
       background-color: #7928CA;
       svg > path {
-        fill: #d7d7d7;
+        fill: #ffffff;
       }
+       svg > line {
+         stroke: #FFFFFF;
+       }
     }
 }
 
@@ -291,12 +300,12 @@ a.router-link-exact-active {
    justify-content: center;
 
     section {
-      width: 90%;
+      width: 100%;
       height: 80%;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 16px;
+      border-radius: 8%;
       background: url("../assets/sidebar/white-curved.png") no-repeat;
       background-size: cover;
       box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);
@@ -327,7 +336,7 @@ a.router-link-exact-active {
           color: #252F40;
           font-weight: bold;
           &:hover {
-            background-color: #d7d7d7;
+            background-color: #e5e5e5;
             box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);
             transition: ease .4s;
           }

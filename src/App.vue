@@ -45,11 +45,11 @@ body {
 
 @keyframes bounce-in {
   0% {
-    transform: translateY(100rem);
+    transform: translateY(5rem);
     opacity: 0;
   }
   50% {
-    transform: translateY(-5rem);
+    transform: translateY(-2rem);
     opacity: 0.5;
   }
   100% {

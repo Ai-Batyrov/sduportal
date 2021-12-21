@@ -5,6 +5,10 @@ import Main from '@/views/Main'
 import { createRouter, createWebHistory } from 'vue-router'
 import MyCurriculum from '@/views/MyCurriculum'
 import Grades from '@/views/Grades'
+import Transcript from '@/views/Transcript'
+import CourseRegistration from '@/views/CourseRegistration'
+import Wishlist from '@/views/Wishlist'
+import Withdrawals from '@/views/Withdrawals'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -38,6 +42,26 @@ const router = createRouter({
       path: '/Grades',
       name: 'Grades',
       component: Grades
+    },
+    {
+      path: '/Transcript',
+      name: 'Transcript',
+      component: Transcript
+    },
+    {
+      path: '/CourseRegistration',
+      name: 'CourseRegistration',
+      component: CourseRegistration
+    },
+    {
+      path: '/Wishlist',
+      name: 'Wishlist',
+      component: Wishlist
+    },
+    {
+      path: '/Withdrawals',
+      name: 'Withdrawals',
+      component: Withdrawals
     }
   ]
 })

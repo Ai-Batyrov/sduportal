@@ -36,6 +36,7 @@ export default {
   cursor: pointer;
   transition: ease .3s;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.12);
+  user-select: none;
 
   img {
     width: 45px;

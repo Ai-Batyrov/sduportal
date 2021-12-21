@@ -9,16 +9,20 @@
     <td class="number">{{ course.ects }}</td>
     <td class="number">{{ course.grade }}</td>
     <td class="number"> <PreRequisiteRectrangle v-if="course.requisites==='PR'"/> </td>
-    <td class="number"> <StatusRectangle v-if="course.status==='available'"/> </td>
+    <td class="number">
+      <StatusRectangle v-if="course.status==='available'"/>
+      <add-button v-if="course.status==='add'"/>
+    </td>
   </tr>
 </template>
 
 <script>
 import StatusRectangle from '@/components/MyCurriculumTable/StatusRectangle'
 import PreRequisiteRectrangle from '@/components/MyCurriculumTable/PreRequisiteRectrangle'
+import AddButton from '@/components/Wishlist/addButton'
 export default {
   name: 'TableItem',
-  components: { PreRequisiteRectrangle, StatusRectangle },
+  components: { AddButton, PreRequisiteRectrangle, StatusRectangle },
   props: ['course', 'id'],
   data () {
     return {}
