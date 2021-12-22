@@ -1,22 +1,16 @@
 <template>
 <div>
   <div id="top">
-    <h1>Course Registration</h1>
+    <h1>Questionnaries</h1>
     <profile />
   </div>
   <div id="main">
     <section>
-      <div>Course Registration is closed</div>
-      <div>
+      <label>Currently there are no available questionnaire</label>
+      <div align="right">
         <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" style="width: 4rem; fill: #c71269">
           <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm1.41-1.41A8 8 0 1 0 15.66 4.34 8 8 0 0 0 4.34 15.66zm9.9-8.49L11.41 10l2.83 2.83-1.41 1.41L10 11.41l-2.83 2.83-1.41-1.41L8.59 10 5.76 7.17l1.41-1.41L10 8.59l2.83-2.83 1.41 1.41z"/>
         </svg>
-      </div>
-    </section>
-    <section>
-      <div>
-        <label><strong>Status: </strong>Not registered</label><br>
-        <label>Course registration available at 17.01.2022 - 24.01.2022</label>
       </div>
     </section>
   </div>
@@ -25,8 +19,9 @@
 
 <script>
 import profile from '@/components/profile/profile'
+
 export default {
-  name: 'CourseRegistration',
+  name: 'Questionnaries',
   components: { profile }
 }
 </script>
@@ -52,7 +47,7 @@ export default {
 
 section {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -64,5 +59,10 @@ section {
   font-family: "Mark Pro", serif;
   font-size: 18px;
   margin-bottom: 3rem;
+
+  div {
+    width: auto;
+    height: 100%;
+  }
 }
 </style>

@@ -6,7 +6,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default {
   name: 'App',
-  components: {
-  }
+  components: {}
 }
 createApp(App).use(router).mount('#app')

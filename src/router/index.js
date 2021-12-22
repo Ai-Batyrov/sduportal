@@ -9,6 +9,10 @@ import Transcript from '@/views/Transcript'
 import CourseRegistration from '@/views/CourseRegistration'
 import Wishlist from '@/views/Wishlist'
 import Withdrawals from '@/views/Withdrawals'
+import ConsentRequests from '@/views/ConsentRequests'
+import OnlineServices from '@/views/OnlineServices'
+import Questionnaires from '@/views/Questionnaires'
+import SystemCalendar from '@/views/SystemCalendar'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -62,6 +66,26 @@ const router = createRouter({
       path: '/Withdrawals',
       name: 'Withdrawals',
       component: Withdrawals
+    },
+    {
+      path: '/ConsentRequests',
+      name: 'ConsentRequests',
+      component: ConsentRequests
+    },
+    {
+      path: '/OnlineServices',
+      name: 'OnlineServices',
+      component: OnlineServices
+    },
+    {
+      path: '/Questionnaires',
+      name: 'Questionnaires',
+      component: Questionnaires
+    },
+    {
+      path: '/SystemCalendar',
+      name: 'SystemCalendar',
+      component: SystemCalendar
     }
   ]
 })

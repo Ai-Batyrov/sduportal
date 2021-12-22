@@ -129,6 +129,7 @@ export default {
           font-size: 24px;
           color: #141414;
           font-weight: bold;
+          user-select: none;
         }
       }
     }
@@ -139,6 +140,7 @@ export default {
       align-items: center;
       width: 400px;
       margin-right: 50px;
+      user-select: none;
     }
   }
 }
