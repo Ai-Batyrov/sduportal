@@ -2,7 +2,7 @@
   <div>
     <div id="top">
       <h1>My Curriculum / Course Structure</h1>
-      <profile />
+      <profile @toggle="$emit('toggle')" />
     </div>
     <div id="tables">
       <Table />
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Profile from '@/components/profile/profile'
+import Profile from '@/components/dropdowns/profile'
 import Table from '@/components/MyCurriculumTable/Table'
 export default {
   name: 'MyCurriculum',
@@ -378,12 +378,14 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 10%;
   margin-bottom: 2rem;
 
   h1 {
     font-family: "Mark Pro", serif;
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 
@@ -392,7 +394,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  width: 90%;
+  width: 100%;
 }
 
 </style>

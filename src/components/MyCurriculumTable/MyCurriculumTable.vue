@@ -50,4 +50,12 @@ caption {
   color: #2f3038;
   font-size: 22px;
 }
+
+.dark table, .dark caption {
+  color: #d4e3ff;
+
+  tr:hover {
+    color:#d4e3ff;
+  }
+}
 </style>

@@ -34,4 +34,8 @@ export default {
 .number {
   text-align: center;
 }
+
+.dark *:hover {
+  color: #d4e3ff;
+}
 </style>

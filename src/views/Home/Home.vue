@@ -86,12 +86,16 @@ export default {
 <style lang="less" scoped>
 .font {
   font-family: "Mark Pro", serif;
-  color: #67748E;
 }
 
 h1 {
   .font();
-  color: #3d4356;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.dark h1{
+  color: #d4d4d4;
 }
 
 #cards {
@@ -109,6 +113,7 @@ h1 {
   background: #FFFFFF;
   box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
+  transition: background-color 0.4s ease-in-out;
   div {
     color: #252F40;
     margin: 20px;
@@ -116,6 +121,15 @@ h1 {
   .h-card {
     font-weight: bold;
   }
+}
+
+.dark .card {
+  background: linear-gradient(135deg, #3A416F 0%, #141727 90%);
+  backdrop-filter: blur(50px);
+  div {
+    color: #d4d4d4;
+  }
+  transition: background-color 0.4s ease-in-out;
 }
 
 .information {

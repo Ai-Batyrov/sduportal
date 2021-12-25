@@ -365,6 +365,7 @@ export default {
 
 <style lang="less" scoped>
 .table-wrap {
+  z-index: -1;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -374,5 +375,11 @@ export default {
   padding: 10px 10px 20px 10px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
+}
+
+.dark .table-wrap {
+  background: linear-gradient(135deg, #3A416F 0%, #141727 90%);
+  backdrop-filter: blur(50px);
+  border: 1px solid #3A416F;
 }
 </style>

@@ -134,4 +134,12 @@ export default {
 table {
   font-family: 'Mark Pro', serif;
 }
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.dark table {
+  color: #d4d4d4;
+}
 </style>

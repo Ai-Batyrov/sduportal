@@ -14,7 +14,7 @@
         <div>
           <div class="order">
             <label>Order type:</label>
-            <div style="width: 71%">
+            <div style="width: 70%">
               <select>
                 <option value="1">Transcript</option>
                 <option value="2">Information about studying place (University)</option>
@@ -31,7 +31,7 @@
           </div>
           <div class="order">
             <label>Language:</label>
-            <div style="width: 71%">
+            <div style="width: 70%">
               <select>
                 <option value="1">Қазақ</option>
                 <option value="2">Русский</option>
@@ -41,7 +41,7 @@
           </div>
           <div class="order">
             <label>Delivery method:</label>
-            <div style="width: 71%">
+            <div style="width: 70%">
               <select>
                 <option value="1">Student Affairs</option>
                 <option value="2">Online</option>
@@ -85,7 +85,7 @@
 </template>
 
 <script>
-import profile from '@/components/profile/profile'
+import profile from '@/components/dropdowns/profile'
 
 export default {
   name: 'OnlineServices',
@@ -105,6 +105,8 @@ export default {
 
   h1 {
     font-family: "Mark Pro", serif;
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 
@@ -124,11 +126,11 @@ section {
   padding: 2rem;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
   font-family: "Mark Pro", serif;
-  font-size: 18px;
+  font-size: 1.1rem;
   margin-bottom: 3rem;
 
   div {
-    width: 90%;
+    width: 80%;
     height: 100%;
   }
 }
@@ -151,10 +153,10 @@ button {
   font-size: 1.4rem;
   background: linear-gradient(135deg, #747dff 0%, #1f1cd5 100%);
   border-radius: 0.5rem;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
   &:hover {
-    transform: scale(1.05);
-    transition: 0.3s linear;
+    transform: scale(1.02);
+    transition: 0.2s linear;
   }
 
   &:active {

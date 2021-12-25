@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import profile from '@/components/profile/profile'
+import profile from '@/components/dropdowns/profile'
 export default {
   name: 'CourseRegistration',
   components: { profile }
@@ -43,6 +43,8 @@ export default {
 
   h1 {
     font-family: "Mark Pro", serif;
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 

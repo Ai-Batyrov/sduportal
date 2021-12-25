@@ -1,7 +1,7 @@
 <template>
-<div>
-  <div id="profile">
-    <img src="@/assets/home/nav/avatar.jpg" alt="">
+<div id="wrap">
+  <div id="profile" @click="isOpen = !isOpen">
+    <img src="@/assets/home/nav/avatar.jpg" alt="avatar">
     <div>Aibolat Batyrov</div>
     <div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" width="16px">
@@ -11,20 +11,36 @@
       </svg>
     </div>
   </div>
+  <transition name="fade" appear>
+    <ProfileDropdown v-if="isOpen" @toggle="$emit('toggle')"/>
+  </transition>
 </div>
 </template>
 
 <script>
+import ProfileDropdown from '@/components/dropdowns/ProfileDropdown'
 export default {
-  name: 'profile'
+  name: 'profile',
+  components: { ProfileDropdown },
+  data () {
+    return {
+      isOpen: false
+    }
+  }
 }
 </script>
 
 <style lang="less" scoped>
+#wrap {
+  width: 15rem;
+  height: 5rem;
+}
+
 #profile {
-  width: 210px;
-  height: 60px;
+  width: 15rem;
+  height: 4rem;
   border-radius: 8px;
+  z-index: 1;
   padding: 8px;
   background: #fff;
   display: flex;
@@ -47,6 +63,37 @@ export default {
   &:hover {
     background: #d7d7d7;
     transition: ease .3s;
+  }
+}
+
+.fade-leave-active {
+  animation: fade 0.2s reverse;
+}
+
+.fade-enter-active {
+  animation: fade 0.2s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dark #profile {
+  background: rgba(0, 115, 185, 0.83);
+  box-shadow: 0 5px 15px rgba(0, 115, 185, 0.3);
+  border: 1px #3A416F solid;
+
+  svg {
+    fill: #d7d7d7;
+  }
+
+  &:hover {
+    background: rgba(0, 115, 185, 0.98);
   }
 }
 </style>

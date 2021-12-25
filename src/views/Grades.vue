@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Profile from '@/components/profile/profile'
+import Profile from '@/components/dropdowns/profile'
 import TableWrapLayout from '@/components/Grades/GradeTable'
 export default {
   name: 'Grades',
@@ -30,6 +30,8 @@ export default {
 
   h1 {
     font-family: "Mark Pro", serif;
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 </style>

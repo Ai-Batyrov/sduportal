@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import profile from '@/components/profile/profile'
+import profile from '@/components/dropdowns/profile'
 
 export default {
   name: 'ConsentRequests',
@@ -60,6 +60,8 @@ export default {
 
   h1 {
     font-family: "Mark Pro", serif;
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 
@@ -101,15 +103,15 @@ button {
   font-size: 1.3rem;
   border: none;
   color: #FFFFFF;
-  transition: all 0.3s ease;
+  transition: all 0.3s linear;
 
   &:hover {
-    transform: scale(1.06);
-    transition: all 0.3s ease;
+    transform: scale(1.03);
+    transition: all 0.3s linear;
   }
 
   &:active {
-    transform: scale(0.98);
+    transform: scale(0.99);
   }
 }
 

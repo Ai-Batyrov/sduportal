@@ -13,6 +13,7 @@ import ConsentRequests from '@/views/ConsentRequests'
 import OnlineServices from '@/views/OnlineServices'
 import Questionnaires from '@/views/Questionnaires'
 import SystemCalendar from '@/views/SystemCalendar'
+import ProfileSettings from '@/views/ProfileSettings'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -86,6 +87,11 @@ const router = createRouter({
       path: '/SystemCalendar',
       name: 'SystemCalendar',
       component: SystemCalendar
+    },
+    {
+      path: '/ProfileSettings',
+      name: 'ProfileSettings',
+      component: ProfileSettings
     }
   ]
 })

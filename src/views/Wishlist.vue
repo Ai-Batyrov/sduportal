@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import profile from '@/components/profile/profile'
+import profile from '@/components/dropdowns/profile'
 import WishlistTable from '@/components/Wishlist/WishlistTable'
 import Table from '@/components/MyCurriculumTable/Table'
 
@@ -49,6 +49,8 @@ export default {
 
   h1 {
     font-family: "Mark Pro", serif;
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 

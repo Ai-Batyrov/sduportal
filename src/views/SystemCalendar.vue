@@ -15,7 +15,7 @@
 
 <script>
 import SystemCalendarTable from '@/components/SystemCalendar/SystemCalendarTable'
-import profile from '@/components/profile/profile'
+import profile from '@/components/dropdowns/profile'
 export default {
   name: 'SystemCalendar',
   components: { SystemCalendarTable, profile }
@@ -34,6 +34,8 @@ export default {
 
   h1 {
     font-family: "Mark Pro", serif;
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 

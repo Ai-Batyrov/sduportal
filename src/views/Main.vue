@@ -4,19 +4,28 @@
       <section>
         <div id="nav">
           <div>
-            <div class="navbar-element">
+            <div class="navbar-element" @click="isOpen = !isOpen">
               <img src="@/assets/home/nav/user-circle.svg" alt="user">
             </div>
-            <div class="navbar-element">
+            <transition name="fade" appear>
+              <UserDropdown v-if="isOpen" />
+            </transition>
+            <div class="navbar-element" @click="isOpen2 = !isOpen2">
               <img src="@/assets/home/nav/settingssvg.svg" alt="settings">
             </div>
-            <div class="navbar-element">
+            <transition name="fade" appear>
+              <SettingsDropdown v-if="isOpen2" @toggle="$emit('toggle')"/>
+            </transition>
+            <div class="navbar-element" @click="isOpen3 = !isOpen3">
               <img src="@/assets/home/nav/mail.svg" alt="mail">
             </div>
+            <transition name="fade" appear>
+              <MessageDropdown v-if="isOpen3" />
+            </transition>
           </div>
         </div>
       </section>
-      <div id="home-menu">
+      <div class="home-menu">
         <div id="user-avatar">
           <figure>
             <img src="@/assets/home/nav/avatar.jpg" alt="avatar" width="74px">
@@ -71,13 +80,20 @@
 import Home from '@/views/Home/Home'
 import Schedule from '@/views/Home/Schedule'
 import Attendance from '@/views/Home/Attendance'
+import UserDropdown from '@/components/dropdowns/UserDropdown'
+import MessageDropdown from '@/components/dropdowns/MessageDropdown'
+import SettingsDropdown from '@/components/dropdowns/SettingsDropdown'
 export default {
   name: 'Main',
   // eslint-disable-next-line vue/no-unused-components
-  components: { Home, Schedule, Attendance },
+  components: { SettingsDropdown, MessageDropdown, Home, Schedule, Attendance, UserDropdown },
+  props: ['mode'],
   data () {
     return {
-      component: 'Home'
+      component: 'Home',
+      isOpen: false,
+      isOpen2: false,
+      isOpen3: false
     }
   }
 }
@@ -96,14 +112,14 @@ export default {
 
 #ultimate {
   width: 100%;
-  height: 50%;
+  height: 35%;
 
-  #home-menu {
+  .home-menu {
     position: absolute;
     width: 73%;
     display: flex;
     justify-content: space-between;
-    left: 350px;
+    left: 360px;
     top: 280px;
     background: rgba(255, 255, 255, 0.80059);
     box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);
@@ -138,9 +154,24 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 400px;
+      width: 30rem;
       margin-right: 50px;
       user-select: none;
+    }
+  }
+}
+
+.dark {
+  #ultimate {
+    .home-menu {
+      background: rgba(25, 39, 52, 0.36);
+      box-shadow: 0 10px 17px rgba(148, 147, 147, 0.23);
+      color: #f3f3f3;
+      #user-avatar {
+        div, span > #fullname{
+          color: #d1d1d1;
+        }
+      }
     }
   }
 }
@@ -183,8 +214,8 @@ ul {
   justify-content: space-between;
   padding: 0;
   li {
-    height: 40px;
-    width: 100%;
+    height: 2rem;
+    width: 14rem;
     display: flex;
     align-items: center;
     margin-right: 10px;
@@ -199,6 +230,9 @@ ul {
       .font();
       color: #2f3038;
       cursor: pointer;
+      backdrop-filter: blur(20px);
+      border-radius: .5rem;
+      transition: ease .4s;
       div {
         display: flex;
         justify-content: center;
@@ -212,10 +246,23 @@ ul {
       &:hover {
         background-color: #ffffff;
         box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);
-        border-radius: 8px;
         transition: ease .4s;
       }
     }
+  }
+}
+
+.dark ul li button {
+  border: rgba(215, 215, 215, 0.2) 1px solid;
+  border-radius: .5rem;
+  div {
+    color: rgba(243, 243, 243, 0.66);
+  }
+
+  &:hover {
+    background-color: #4A47A3;
+    box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);
+    transition: ease .4s;
   }
 }
 
@@ -236,4 +283,10 @@ ul {
   }
 }
 
+//iPad Pro
+@media screen and (min-width: 1023px) and (max-width: 1026px) {
+  #ultimate {
+    width: 90%;
+  }
+}
 </style>

@@ -109,9 +109,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
 table {
   text-align: center;
   font-family: 'Mark Pro', serif;
+}
+
+.dark table {
+  color: #d4d4d4;
 }
 </style>

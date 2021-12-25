@@ -18,7 +18,7 @@
 
 <script>
 import TranscriptTable from '@/components/Transcript/TranscriptTable'
-import Profile from '@/components/profile/profile'
+import Profile from '@/components/dropdowns/profile'
 import TranscriptInfoStudent from '@/components/Transcript/TranscriptInfoStudent'
 
 export default {
@@ -283,7 +283,8 @@ export default {
 
   h1 {
     font-family: "Mark Pro", serif;
-    color: rgba(37, 53, 78, 0.9);
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 
