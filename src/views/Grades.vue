@@ -2,7 +2,7 @@
 <div style="justify-content: flex-start">
   <div id="top">
     <h1>Grades List</h1>
-    <profile />
+    <profile @toggle="$emit('toggle')"/>
   </div>
   <br>
   <TableWrapLayout />

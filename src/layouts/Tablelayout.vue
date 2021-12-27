@@ -50,4 +50,10 @@ caption {
   color: #2f3038;
   font-size: 22px;
 }
+
+.dark {
+  caption, th, td, tr {
+    color: #d7d7d7;
+  }
+}
 </style>

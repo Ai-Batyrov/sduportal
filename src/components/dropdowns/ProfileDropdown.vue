@@ -44,8 +44,8 @@ div {
   z-index: 1000;
   background: #FFFFFF;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.12);
-  top: calc(100% + -1rem);
-  left: 90.5%;
+  top: calc(100% - 0.7rem);
+  left: 90.6%;
   transform: translateX(-50%);
   width: 15rem;
   height: 10rem;

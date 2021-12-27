@@ -54,4 +54,11 @@ section {
   font-family: "Mark Pro", serif;
   font-size: 16px;
 }
+
+.dark {
+  caption, th, thead, tbody {
+    color: #d7d7d7;
+  }
+}
+
 </style>

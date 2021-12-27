@@ -34,8 +34,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 td {
   text-align: center;
+}
+
+.dark {
+  td, tr, th {
+    color: #d7d7d7;
+  }
 }
 </style>

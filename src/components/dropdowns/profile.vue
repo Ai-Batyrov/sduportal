@@ -34,6 +34,8 @@ export default {
 #wrap {
   width: 15rem;
   height: 5rem;
+  display: flex;
+  align-items: center;
 }
 
 #profile {

@@ -52,4 +52,13 @@ export default {
     color: rgb(49, 68, 81);
   }
 }
+
+.dark #main {
+  background: linear-gradient(135deg, #3A416F 0%, #141727 90%);
+  backdrop-filter: blur(50px);
+  border: 1px solid #3A416F;
+  label {
+    color: #d7d7d7;
+  }
+}
 </style>
